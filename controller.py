@@ -1,11 +1,20 @@
+import traceback
+
+import psycopg2
 from flask import Flask, request, jsonify
 
+from repository_currency import get_currency_by_date_from_nbrb
+
 app = Flask(__name__)
+
+
+
+
 
 @app.route('/load_exchange rate_on_date', methods=['GET'])
 def exchange_rate_on_date():
     date = request.json.get('date')
-    result = date
+    get_currency_by_date_from_nbrb(date)
     return jsonify("Successful load exchange rate on date="+date)
 
 
