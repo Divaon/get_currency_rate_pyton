@@ -10,6 +10,7 @@ host = "host"
 port = "port"
 
 
+
 def add_currency_rate_to_database(line):
 
     try:
