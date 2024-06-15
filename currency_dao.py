@@ -1,8 +1,6 @@
-from datetime import datetime
-
 import psycopg2
 
-# Замените значения переменных на свои собственные
+# data to get access to db
 dbname = "dbname"
 user = "user"
 password = "password"
@@ -10,7 +8,7 @@ host = "host"
 port = "port"
 
 
-
+# load data about currency to db
 def add_currency_rate_to_database(line):
 
     try:
